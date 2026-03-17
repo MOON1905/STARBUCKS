@@ -1,0 +1,342 @@
+:root{
+--verde:#006241;
+--verde-oscuro:#004f33;
+--gris:#f4f4f4;
+--footer:#1e3932;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--gris);
+color:#333;
+}
+
+/* ================= HEADER ================= */
+header{
+background:var(--verde);
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+}
+
+.logo{
+font-weight:bold;
+font-size:18px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:.7;
+}
+
+/* ================= HERO ================= */
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200") center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+margin-bottom:20px;
+}
+
+.btn-primary{
+background:var(--verde);
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn-primary:hover{
+background:var(--verde-oscuro);
+}
+
+/* ================= MENÚ ================= */
+#menu{
+padding:60px 40px;
+text-align:center;
+}
+
+.titulo-menu{
+margin-bottom:40px;
+color:var(--verde);
+}
+
+.options-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+}
+
+.option-card{
+background:white;
+width:240px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+cursor:pointer;
+transition:.4s;
+}
+
+.option-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+}
+
+.option-card img{
+width:100%;
+height:170px;
+object-fit:cover;
+display:block;
+}
+
+.option-card h3{
+padding:15px;
+}
+
+/* ===== BEBIDAS ===== */
+.bebidas-grid{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+margin-top:40px;
+}
+
+.bebida-card{
+background:white;
+width:230px;
+padding:18px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+text-align:center;
+animation:fadeUp .5s ease forwards;
+opacity:0;
+transform:translateY(20px);
+}
+
+.bebida-card img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:12px;
+}
+
+.bebida-card:hover{
+transform:translateY(-6px);
+}
+
+/* ================= CAFÉ DEL DÍA ================= */
+.cafe-dia{
+background:white;
+padding:60px 40px;
+text-align:center;
+}
+
+.cafe-card{
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+}
+
+.cafe-card img{
+width:300px;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.precio{
+font-size:20px;
+color:var(--verde);
+font-weight:bold;
+margin:12px 0;
+}
+
+.btn-dia{
+background:#d4af37;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:25px;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn-dia:hover{
+background:#b9972e;
+}
+
+/* ================= RECOMPENSAS ================= */
+.recompensas{
+background:var(--verde);
+color:white;
+padding:60px;
+text-align:center;
+}
+
+.btn-secondary{
+background:white;
+color:var(--verde);
+border:none;
+padding:12px 25px;
+border-radius:25px;
+cursor:pointer;
+margin-top:15px;
+}
+
+/* ================= FOOTER ================= */
+/* ===== FOOTER PROFESIONAL ===== */
+
+footer{
+background:#0e382c;
+color:white;
+padding:60px 50px 40px 50px;
+margin-top:60px;
+}
+/* Quitar espacio blanco entre Café del Día y Footer */
+
+.cafe-dia{
+margin-bottom:0;
+padding-bottom:60px;
+}
+
+footer{
+margin-top:0; /* elimina separación */
+}
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:40px;
+max-width:1200px;
+margin:auto;
+}
+
+.footer-col h4{
+margin-bottom:20px;
+font-size:18px;
+border-left:4px solid #1ed760;
+padding-left:10px;
+letter-spacing:1px;
+}
+
+.footer-col button{
+display:block;
+width:100%;
+background:transparent;
+border:none;
+color:#dcdcdc;
+text-align:left;
+padding:8px 0;
+font-size:15px;
+cursor:pointer;
+transition:all .3s ease;
+position:relative;
+}
+
+.footer-col button::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:1px;
+background:#1ed760;
+transition:.3s;
+}
+
+.footer-col button:hover{
+color:#1ed760;
+padding-left:8px;
+}
+
+.footer-col button:hover::after{
+width:40%;
+}
+
+.copy{
+text-align:center;
+margin-top:40px;
+padding-top:20px;
+border-top:1px solid rgba(255,255,255,.2);
+font-size:14px;
+color:#c7c7c7;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+footer{
+padding:40px 20px;
+}
+
+.footer-col h4{
+font-size:16px;
+}
+
+.footer-col button{
+font-size:14px;
+}
+
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+text-align:center;
+}
+
+.cafe-card{
+flex-direction:column;
+}
+
+}

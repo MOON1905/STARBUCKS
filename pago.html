@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pago - Starbucks</title>
+<link rel="stylesheet" href="pago.css">
+</head>
+
+<body>
+
+<div class="pago-container">
+
+<h2>Finalizar Compra</h2>
+
+<div id="productoPago" class="producto-box"></div>
+
+<form id="formPago">
+
+<input type="text" placeholder="Nombre en la tarjeta" required>
+<input type="text" placeholder="Número de tarjeta" maxlength="16" required>
+<input type="text" placeholder="MM/AA" required>
+<input type="text" placeholder="CVV" maxlength="3" required>
+
+<button type="submit" class="btn-pagar">
+Pagar Ahora
+</button>
+
+</form>
+
+</div>
+
+<script src="pago.js"></script>
+</body>
+</html>

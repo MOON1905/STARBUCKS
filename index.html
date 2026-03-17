@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starbucks Smart Choice MX</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">☕ Starbucks Smart Choice MX</div>
+<nav>
+<a href="#">Inicio</a>
+<a href="#menu">Menú</a>
+<a href="#cafeDia">Café del Día</a>
+<a href="#recompensas">Recompensas</a>
+<a href="#footer">Contacto</a>
+<a href="login.html" class="btn-login">Login</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Descubre tu bebida perfecta</h1>
+<p>Explora nuestras categorías y ordena tu favorita</p>
+<a href="#menu"><button class="btn-primary">Explorar menú</button></a>
+</section>
+
+<!-- MENÚ -->
+<section id="menu">
+<h2 class="titulo-menu">Nuestro Menú</h2>
+
+<div class="options-container">
+
+<div class="option-card" onclick="mostrarBebidas('caliente')">
+<img loading="lazy" src="https://www.starbucks.es/_next/image?url=https%3A%2F%2Fwww.digitalassets.starbucks.eu%2Fsites%2Fstarbucks-medialibrary%2Ffiles%2FClassic-Hot-Chocolate_2.jpeg&w=256&q=75">
+<h3>Bebidas Calientes</h3>
+</div>
+
+<div class="option-card" onclick="mostrarBebidas('frio')">
+<img loading="lazy" src="https://www.starbucks.es/_next/image?url=https%3A%2F%2Fwww.digitalassets.starbucks.eu%2Fsites%2Fstarbucks-medialibrary%2Ffiles%2FIced-Latte.jpeg&w=750&q=75">
+<h3>Bebidas Frías</h3>
+</div>
+
+<div class="option-card" onclick="mostrarBebidas('te')">
+<img loading="lazy" src="https://www.starbucks.es/sites/starbucks-es-pwa/files/styles/c10_2_col_text_560x467/public/2021-11/Mint%20Citrus%20Tea.jpeg.webp?h=8a7fc05e&itok=wpDMEYow">
+<h3>Bebidas a base de Té</h3>
+</div>
+
+<div class="option-card" onclick="mostrarBebidas('coldbrew')">
+<img loading="lazy" src="https://www.starbucks.es/_next/image?url=https%3A%2F%2Fwww.digitalassets.starbucks.eu%2Fsites%2Fstarbucks-medialibrary%2Ffiles%2Fassets%2F478a358cfea7341d124149a3df1a30dd.jpg&w=256&q=75">
+<h3>Cold Brew</h3>
+</div>
+
+<div class="option-card" onclick="mostrarBebidas('frappuccino')">
+<img loading="lazy" src="https://www.starbucks.es/_next/image?url=https%3A%2F%2Fwww.digitalassets.starbucks.eu%2Fsites%2Fstarbucks-medialibrary%2Ffiles%2FUbe-Vanilla-Coffee-Frappuccino-2026-Glass-DELIVERY-1500x1500-MOP.jpeg&w=256&q=75">
+<h3>Frappuccino</h3>
+</div>
+
+</div>
+
+<div id="bebidasResultado" class="bebidas-grid"></div>
+</section>
+
+<!-- CAFÉ DEL DÍA -->
+<section id="cafeDia" class="cafe-dia">
+<h2>☕ Café del Día</h2>
+
+<div class="cafe-card">
+<img loading="lazy" src="https://www.starbucks.es/_next/image?url=https%3A%2F%2Fwww.digitalassets.starbucks.eu%2Fsites%2Fstarbucks-medialibrary%2Ffiles%2FIced-Caramel-Macchiato_0.jpeg&w=256&q=75">
+<div>
+<h3>Caramel Macchiato Especial</h3>
+<p>Espresso con leche vaporizada y toque premium de caramelo.</p>
+<p class="precio">$99 MXN</p>
+<button class="btn-dia" onclick="ordenar('Caramel Macchiato Especial','$99 MXN')">
+Ordenar Ahora
+</button>
+</div>
+</div>
+</section>
+
+<!-- RECOMPENSAS -->
+<section id="recompensas" class="recompensas">
+<h2>⭐ Starbucks Rewards</h2>
+<p>Acumula estrellas y recibe bebidas gratis</p>
+<button class="btn-secondary" onclick="verRecompensas()">Unirme ahora</button>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+<div class="footer-container">
+
+<div class="footer-col">
+<h4>Acerca de Nosotros</h4>
+<button onclick="window.location.href='#'">Nuestra historia</button>
+<button onclick="window.location.href='#'">Misión y visión</button>
+<button onclick="window.location.href='#'">Responsabilidad social</button>
+</div>
+
+<div class="footer-col">
+<h4>Contacto</h4>
+<button onclick="window.location.href='#'">Atención al cliente</button>
+<button onclick="window.location.href='#'">Ubicar tienda</button>
+<button onclick="window.location.href='#'">Soporte</button>
+</div>
+
+<div class="footer-col">
+<h4>Vacantes</h4>
+<button onclick="window.location.href='#'">Trabaja con nosotros</button>
+<button onclick="window.location.href='#'">Postularme</button>
+</div>
+
+<div class="footer-col">
+<h4>Facturación</h4>
+<button onclick="window.location.href='#'">Solicitar factura</button>
+<button onclick="window.location.href='#'">Consultar factura</button>
+</div>
+
+</div>
+
+<p class="copy">© 2026 Starbucks Smart Choice MX | Proyecto de Programación Web</p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
